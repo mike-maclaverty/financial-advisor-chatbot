@@ -7,7 +7,7 @@ DEFAULT_VPC_ID=$(aws ec2 describe-vpcs --query 'Vpcs[?IsDefault==`true`].VpcId |
 DEFAULT_SUBNET_ID=$(aws ec2 describe-subnets --filters "Name=vpc-id,Values=$DEFAULT_VPC_ID" --query 'Subnets[0].SubnetId' --output text)
 
 # Define EC2 AMI Image ID
-AMI_IMAGE="ami-04e601abe3e1a910f"
+AMI_IMAGE="ami-00beae93a2d981137"
 
 # Define EC2 IAM Role variables
 ROLE_NAME="EC2_ECR_Access_Role"
